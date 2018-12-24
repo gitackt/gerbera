@@ -23,16 +23,15 @@ class SendComponent extends Component {
     sendAmount: 0,
   };
 
-    handleChange = name => event => {
+  handleChange = name => event => {
     this.setState({
       [name]: event.target.value,
     });
   };
 
   sendCoin = async () => {
-    const { web3 } = await this.props.web3;
     if (this.props.myAddress && this.state.sendAddress) {
-      await web3.eth.sendTransaction({from: this.state.myAddress, to: this.state.sendAddress, value: web3.toWei(this.state.sendAmount, "ether")});
+      await this.props.web3.eth.sendTransaction({from: this.props.myAddress, to: this.state.sendAddress, value: this.props.web3.utils.toWei(this.state.sendAmount, "ether")});
     }
   };
 

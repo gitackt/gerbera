@@ -81,9 +81,13 @@ miner.stop()
 eth.getBalance(eth.accounts[0])
 ```
 
-* Send ETH
+* unlock
 ```
 personal.unlockAccount(eth.accounts[0])
+```
+
+* Send ETH
+```
 eth.sendTransaction({from: "<address1>", to: "<address2>", value: web3.toWei(<ammounts>, "ether")})
 ```
 

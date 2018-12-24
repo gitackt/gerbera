@@ -31,10 +31,14 @@ genesis.json
 ## Geth
 
 * help
-`geth --h`
+```
+geth --h
+```
 
 * initialize
-`geth --datadir ~/testnet init ~/testnet/genesis.json`
+```
+geth --datadir ~/testnet init ~/testnet/genesis.json
+```
 
 * server
 ```
@@ -42,15 +46,21 @@ geth --networkid "15" --nodiscover --datadir "~/testnet" console 2>> ~/testnet/g
 ```
 
 * console
-`geth console 2>> /dev/null`
+```
+geth console 2>> /dev/null
+```
 
 ### In console
 
 * Show all accounts
-`eth.accounts`
+```
+eth.accounts
+```
 
 * Create EOA accounts
-`personal.newAccount("some_password")`
+```
+personal.newAccount("some_password")
+```
 
 * Coinbase
 ```
@@ -67,7 +77,9 @@ miner.stop()
 ```
 
 * Get ETH balance
-`eth.getBalance(eth.accounts[0])`
+```
+eth.getBalance(eth.accounts[0])
+```
 
 * Send ETH
 ```
@@ -78,21 +90,31 @@ eth.sendTransaction({from: "<address1>", to: "<address2>", value: web3.toWei(<am
 ## Truffle
 
 * compile
-`truffle compile`
+```
+truffle compile
+```
 
 * migrate
-`truffle migrate`
+```
+truffle migrate
+```
 
 ## React
 
 * install
-`cd client && yarn`
+```
+cd client && yarn
+```
 
 * server
-`cd client && yarn start`
+```
+cd client && yarn start
+```
 
 * build
-`cd client && yarn build`
+```
+cd client && yarn build
+```
 
 ## Wiki
 
